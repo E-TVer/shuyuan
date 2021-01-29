@@ -16,7 +16,7 @@
 
 注②：仅谷歌搜书 关键字前加“<0>”可将域名设置为谷歌原网或加“<1>”设置为另一个镜像， 如“<0>斗破苍穹#天蚕土豆$www.qidian.com”(注：本源默认使用谷歌镜像，谷歌原网需挂VPN才能用)
 ```
-![搜索格式定向搜索目标书籍](https://images.gitee.com/uploads/images/2020/1213/210236_d207db44_8324729.jpeg "Screenshot_2020-12-13-21-01-46-615_io.legado.app.release.jpg")
+![搜索格式定向搜索目标书籍](https://images.gitee.com/uploads/images/2021/0130/070417_dcc50bd0_8324729.jpeg "搜索格式.jpg")
 
 
 ###  :fa-cogs: 加前缀或修改简介操控书源
@@ -37,7 +37,7 @@
 
 注②：若谷歌搜书加前缀重新设置域名，也采用通过添加前缀的方式控制书源，则“<0>”或“<1>”必须在最前面，即“<0>!|”或“<1>@^”。
 ```
-![加前缀或修改简介操控书源](https://images.gitee.com/uploads/images/2020/1213/210236_d207db44_8324729.jpeg "Screenshot_2020-12-13-21-01-46-615_io.legado.app.release.jpg")
+![加前缀或修改简介操控书源](https://images.gitee.com/uploads/images/2021/0130/070526_9ee52db5_8324729.jpeg "前缀搜索.jpg")
 ```
 ──────简介设置单本───────
 
@@ -71,7 +71,7 @@
 ②显示元素查询得到的全部章节列表，不做章节筛选
 ③以纯文字模式查找正文内容，避免图片干扰。
 ```
-![修改简介操作书源示范图片](https://images.gitee.com/uploads/images/2020/1213/204550_22c5fad2_8324729.jpeg "IMG_20201213_110909.jpg")
+![修改简介操作书源示范图片](https://images.gitee.com/uploads/images/2021/0130/070610_ac62e322_8324729.jpeg "修改简介.jpg")
 ```
 ───搜索引擎的通用搜索───
 
