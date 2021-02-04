@@ -112,7 +112,7 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V18)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V19)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
 书源合集(107=修复44+自制9+优化39+整理15)：[https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json](https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json)
 <br><br/>
@@ -160,6 +160,20 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V2，全网搜书Pro V19
+───────
+①目录url规则中，屏蔽仅含“追书”两个字的链接，解决类似“m.30sy.com/book/zaguomaitiequshangxue/”这种追书链接包含“chapterlist”而被误当做目录链接，从而导致目录定位出错的问题。
+
+
+②目录url规则中，新增“showchapter”识别关键字，并将候补规则中排除“chapter”改为排除“/chapter”，纵横中文网等几个正版网站的目录终于不会识别出现偏差了。
+
+③优化目录列表规则，屏蔽关键字的写法更严格，尽可能避免屏蔽到正常章节。
+
+④目录下一页链接优化，当设置目录跳转时，所有目录分页的都动态加载，避免章节识别不全的问题。
+
+⑤正文规则，新增当内容包含“内容未加载完成|关闭小说模式|关闭阅读模式”时自动动态加载的逻辑
+```
 ```
 Pro V18
 ──────
