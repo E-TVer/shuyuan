@@ -110,7 +110,7 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V19)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V20)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
 书源合集(107=修复44+自制9+优化39+整理15)：[https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json](https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json)
 <br><br/>
@@ -158,6 +158,21 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V3，全网搜书Pro V20
+───────
+⓪鉴于谷歌搜索结果的元素布局经常变动，故换种不容易受这些变动影响的书籍列表识别规则，修复最近谷歌搜书没有结果的问题
+
+①新增动态加载的指定方式，跳过动态静态判断切换程序，强行指定正文动态加载，正文的程序没有自动切换成动态时可强行指定为动态加载，解决偶尔有些网站内容不全的问题。
+
+②新增静态加载的指定方式，跳过动态静态判断切换程序，强行指定正文静态加载。
+
+③将修改简介、设置前缀、书籍链接后缀三种方式指定书源功能的相关代码统一处理，涉及到此逻辑的其它代码全部精简。
+
+④替换规则中，优化冒号后跟着链接这种规则的识别，避免单独的“:”也被标记，导致误删正文正常内容。
+
+⑤将替换规则中，一条替换规则中的“☯.☯”更正为“☯\.☯”，避免这条规则错误的标记了不应该标记的段落，导致误删正文正常内容。
+```
 ```
 通用书源V2，全网搜书Pro V19
 ───────
