@@ -119,9 +119,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V21)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V22)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V4)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V5)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 导入“通用书源”后，只要将书籍详情页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，直接进入书籍即可阅读。
 <br><br/>
@@ -171,6 +171,13 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V5，全网搜书Pro V22
+───────
+①改进“目录URL规则”处，用于识别章节参考链接的元素查询表达式，原来识别不到参考章节的有些网站现在也能识别了。
+
+②改进“目录列表规则”中元素筛选规则，按结构屏蔽无关链接的写法，避免有些漫画网站的正常章节被屏蔽导致识别章节出现偏差的问题。
+```
 ```
 通用书源V4，全网搜书Pro V21
 ───────
