@@ -119,9 +119,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V22)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V22-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V5)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V5-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 导入“通用书源”后，只要将书籍详情页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，直接进入书籍即可阅读。
 <br><br/>
@@ -171,6 +171,13 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V5-2，全网搜书Pro V22-2
+───────
+①优化“目录url规则”，屏蔽链接包含“list”且是分类的链接，避免目录识别偏差。
+②修正“目录url规则”中储存目录链接的变量与向后传递带书籍编号的网址前端的变量同名导致当两者不一致时访问目录失败的错误。
+③修正上个版本调整章节筛选规则后把“javascript”开头的链接识别成章节链接的错误。
+```
 ```
 通用书源V5，全网搜书Pro V22
 ───────
