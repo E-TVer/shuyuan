@@ -119,9 +119,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V22-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V23)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V5-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V6)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 导入“通用书源”后，只要将书籍详情页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，直接进入书籍即可阅读。
 <br><br/>
@@ -171,6 +171,25 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V6，全网搜书Pro V23
+───────
+①将“正文规则”中的“while(c--)”替换成“for(;c;c--)”，修复动态加载未执行的问题。
+
+旧版问题追踪：
+
+由于js中“while(c--)”与“for(;c;c--)”不等效，导致动静态判断机制判断正文需要动态加载时，虽判断成功却未执行动态加载的问题。
+
+②全面增强“目录url规则”的判断机制，目录链接识别准确度更进一步！
+
+增强部分描述：
+
+由于网站分类、网站推广、网站其它与书籍无关链接大多数字数通常都是固定的二到四个字，故根据此点移除只包含一至四个字又不包含特定关键字的其它链接，避免非目录链接被识别成目录链接的可能。
+
+根据当前baseUrl构造出可大致匹配当前书籍章节链接的正则识别表达式，并将符合此正则表达式的链接移除，避免章节链接被误当成目录链接识别。
+
+根据当前baseUrl构造出可大致匹配当前网站其它书籍详情页链接、目录页链接的正则识别表达式，并将符合此正则表达式又非当前书籍链接的其它链接移除，避免其它书籍的链接被误当成当前书籍的目录链接识别。
+```
 ```
 通用书源V5-2，全网搜书Pro V22-2
 ───────
