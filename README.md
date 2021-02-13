@@ -119,9 +119,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V23-1)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V24)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V6-1)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V7)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
 <br><br/>
@@ -171,6 +171,26 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V7，全网搜书Pro V24
+───────
+⓪章节脚本：
+
+尝试从script中直接抓取章节链接数组，解决有些网站需要点击特定按钮才会通过js加载完整目录的问题。
+并尝试将其中utf-8编码字串还原为字符。
+
+例如：http://m.lssin.com/bookinfo/206651.html
+
+①目录生成：
+
+制作原因──没有目录且正文分页特别多的书籍，一页页的加载下一页会非常非常的慢，根据参考链接生成所有分页组成目录列表则只需加载一两页的时间内就可生成数百数千章大小的目录列表。
+
+举例说明──插入{220#https://wap.yqshuwang.com/2021n/02/14972_2.html#}，则能参考“https://wap.yqshuwang.com/2021n/02/14972_2.html”生成220条章节的目录列表。
+
+重点突出──其中“<>”里是第二页链接，是生成目录必不可少的参考内容。
+
+通用书源──添加形如：“https://wap.yqshuwang.com/2021n/02/14972.html?220#https://wap.yqshuwang.com/2021n/02/14972_2.html#”的网址也能达到修改简介同样的效果。
+```
 ```
 通用书源V6-1，全网搜书Pro V23-1
 ───────
