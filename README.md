@@ -119,9 +119,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V23)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V23-1)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V6)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V6-1)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 导入“通用书源”后，只要将书籍详情页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，直接进入书籍即可阅读。
 <br><br/>
@@ -171,6 +171,18 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V6-1，全网搜书Pro V23-1
+───────
+增强章节逆向排序功能：
+
+增强前，只能正确处理单页目录的逆向排序，面对多分页的目录时会出现每个分页都做好了逆向排序纠正，但分页本身也是逆向却未纠正的问题。
+
+增强后，设置逆向排序时(设置方法见书源的源注释)，会自动加载目录首个分页，并在其中查找正向排序链接，查到后直接将目录链接替换为正向排序的链接，查不到则采用人工排序实现逆向排序。
+
+
+比如：https://m.zhaishulou.com/166849/?[https://m.zhaishulou.com/dir/166849/?page=1&sort=desc]逆
+```
 ```
 通用书源V6，全网搜书Pro V23
 ───────
