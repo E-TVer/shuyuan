@@ -69,6 +69,12 @@
 图：设置成看图模式(默认为图文模式)，只显示图片，不显示文字。
 
 字：设置成纯字模式(默认为图文模式)，只显示文本，不显示图片。
+
+目录生成──没有目录且正文分页特别多的书籍，一页页的加载下一页会非常非常的慢，根据参考链接生成所有分页组成目录列表则能改变这种情况。
+
+举例说明──若插入{220#https://wap.yqshuwang.com/2021n/02/14972_2.html#}，则会参考“https://wap.yqshuwang.com/2021n/02/14972_2.html”生成220条章节的目录列表。
+
+重点突出──其中“##”之间是第二页链接，是生成目录列表必不可少的参考内容。
 ─────⤴
 
 示例：{直[http://m.biquku.la/0/425/]全字}
@@ -123,7 +129,10 @@
 <br><br/>
 通用书源(V7)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
+```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
+在导入的书籍链接后加“?”，然后跟着“单直[目录url]跳全逆图字动静”中任意多个单元或“数字#第二页链接#”，也能实现“功能增强”中描述的效果。
+```
 <br><br/>
 书源合集(107=修复44+自制9+优化39+整理15)：[https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json](https://gitee.com/no-mystery/book-source/raw/master/%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86(%E5%A4%B1%E6%95%88%E4%BF%AE%E5%A4%8D%20%E8%87%AA%E5%88%B6%20%E4%BC%98%E5%8C%96).json)
 <br><br/>
