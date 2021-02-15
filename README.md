@@ -123,9 +123,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V24)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V25)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V7)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V8)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
@@ -178,6 +178,25 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V8，全网搜书Pro V25
+───────
+重要提示：有些书籍获取到了非章节链接不是因为书源出了问题，而是因为网站转移到新的地址，导致目录下一页定位到了旧网站首页，所以获得了非章节链接。比如https://m.18xs.org/book_14120/all.html，像这种请到新网站复制书籍链接。
+
+⓪修正设置获取到的链接尽可能转化为电脑版链接的相关逻辑判断，因为最近几个版本改变了相关处理流程，但判断是否需要尝试转化为电脑链接的逻辑却未跟着修改，现在发现这个问题并进行了修正！
+
+①全面优化“目录url规则”和“目录列表规则”中那种即可以是英文又可以是汉语拼音的屏蔽关键词写法，解决有些以汉语拼音作为书名编号的网址个别书籍链接被屏蔽的问题。
+
+②优化“目录url规则”，屏蔽连接中包含“mulu”但不是书籍目录而是分类的链接，避免目录识别出现偏差，解决www.aixswx.com这种网站的目录识别问题。
+
+③优化“目录url规则”，解除对“//”开头的链接的屏蔽，并对涉及到这种链接的规则进行优化，解决少数网站目录以“//”被屏蔽后识别不到的问题。
+
+④优化“目录列表规则”，预先移除“link”和“meta”标签，剩下与“href”相关的查询表达式都不用再加“a”来精确定位了，解决上个版本会获取到的一些目录杂项的问题，如起点中文。
+
+⑤优化“目录列表规则”，优化查询十六进制书籍编号的规则，排除十六进制编号后接“=”的情况(如“subCateId=”这种容易被错当做书籍编号)，避免分类、书库、排行链接被识别章节链接的可能，解决上个版本会获取到的一些目录杂项的问题，如起点中文。
+
+⑥通用书源获取有些网站书籍的书名时，在经过净化处理后依然存在很多冗余内容(比如https://m.qzleyang.com/bk/16030.html)，针对这种网站会考虑识别简介，若简介以“《”开头，则尝试提取其中书名。
+```
 ```
 通用书源V7，全网搜书Pro V24
 ───────
