@@ -1,0 +1,46 @@
+[
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "艳情,测试",
+    "bookSourceName": "挺好的",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://tinghaode8.cc",
+    "customOrder": 5,
+    "enabled": true,
+    "enabledExplore": true,
+    "lastUpdateTime": 1613386848060,
+    "loginUrl": "https://tinghaode8.cc/tool/getVerify/",
+    "ruleBookInfo": {
+      "canReName": "",
+      "coverUrl": "",
+      "init": "",
+      "name": "",
+      "tocUrl": "@js:book.customIntro?'https://tinghaode8.cc/tool/getChapterList/,{\"method\":\"POST\",\"body\":\"verify='+String(book.customIntro).match(/\\S+/)[0]+'&aid='+String(baseUrl).match(/\\d\\d+/)[0]+'&sbt=%E6%8F%90%E4%BA%A4\"}':'https://www.baidu.com/'"
+    },
+    "ruleContent": {
+      "content": "#nr1@html",
+      "imageStyle": ""
+    },
+    "ruleExplore": {
+      "coverUrl": ""
+    },
+    "ruleSearch": {
+      "author": "strong@text",
+      "bookList": "class.common-bookele",
+      "bookUrl": "tag.a.0@href",
+      "coverUrl": "",
+      "intro": "",
+      "kind": "class.lastupdate@text##栏目：",
+      "lastChapter": "",
+      "name": "class.articlename@text"
+    },
+    "ruleToc": {
+      "chapterList": "ul a@js:book.customIntro?result:['<a href=\"https://www.baidu.com/\">登录查看验证码</a>']",
+      "chapterName": "text",
+      "chapterUrl": "href##javascript:goChapter\\((\\d+),(\\d+)\\);##/novel/$1/$2.html",
+      "isVip": ""
+    },
+    "searchUrl": "https://tinghaode8.cc/search.html?key={{key}}&page={{page}}",
+    "weight": 0
+  }
+]
