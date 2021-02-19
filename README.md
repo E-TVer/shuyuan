@@ -123,9 +123,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V25-6)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V26)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V8-6)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V9)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
@@ -178,6 +178,23 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V9，全网搜书Pro V26
+───────
+⓪修正网站标签错误，导致内容错乱和缺失的问题。
+
+比如网站存在“<img&nbsp;src="image/niaojpg">”或“</a&nbsp;>”这样的标签导致的内容错乱缺失。
+
+①修正同时选中父元素和子元素导致的内容重复问题
+
+②完全改变“正文规则”动态加载机制，加快正文执行速度！！
+
+上个版本在加载每个正文分页时都会重复进行是否要动态加载的判断，整体下来凭空消耗了太多时间，先改为只在正文第一页时判断需要动态还是静态加载。
+
+然后将判断结果通过“正文下一页规则”和“正文规则”相关逻辑代码间接告诉正文第二页、第三页、第…页，减少重复多次执行不必要的判断。
+
+注意：下次阅读APP更新后(2月19日之后的版本)，这次更改的“正文规则”动态加载机制才会完全发挥效果(现在，只有正文第一页、第三页及其之后的分页效果正常，正文第二页始终静态加载)，请谨慎升级！
+```
 ```
 通用书源V8-6，全网搜书Pro V25-6
 ───────
