@@ -123,9 +123,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V27)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V28)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V10)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V11)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
@@ -178,6 +178,27 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V11，全网搜书Pro V28
+───────
+⓪重构“目录列表规则”，更改执行方式！
+
+当目录有分页时，将在目录第一页执行所有规则并试探出能查询到章节链接的jsoup表达式；
+
+剩下的目录分页将跳过“试探出能查询到章节链接的jsoup表达式”的所有语句，直接用目录第一页传递来的jsoup表达式获取章节链接。
+
+加载目录分页很多又没找到参考链接的书籍时，目录整体加载速度比上个版本快无数倍。
+
+①重构“正文规则”，更改执行方式！
+
+当正文有分页时，将在正文第一页执行所有规则并试探出能精确定位到内容元素的jsoup表达式，以及判断出当前书籍正文需要动态加载还是静态加载；
+
+剩下的正文分页将跳过“试探出能精确定位到内容元素的jsoup表达式”及“判断出当前书籍正文需要动态加载还是静态加载”的所有语句，直接用正文第一页传递来的变量来决定是否动态加载和定位内容元素。
+
+提交全书正文整体加载速度！
+
+②优化正文动态加载机制，减少正文内容不全的情况。
+```
 ```
 通用书源V10，全网搜书Pro V27
 ───────
