@@ -62,9 +62,9 @@
 
 逆：设置目录章节逆向排序。
 
-动：强制设置正文动态加载。
+动：强制设置正文动态加载(正文默认会进行需要动态加载还是静态加载的判断，然后自动切换模式，若判断失误导致本应切换成动态加载却未切换时，可强制设置正文动态加载)。
 
-静：强制设置正文静态加载。
+静：强制设置正文静态加载(正文默认会进行需要动态加载还是静态加载的判断，然后自动切换模式，若判断失误导致本应保持静态加载却切换成动态加载而使正文加载时间变长时，可强制设置静态动态加载)。
 
 图：设置成看图模式(默认为图文模式)，只显示图片，不显示文字。
 
@@ -123,9 +123,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V28-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V28-3)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V11-2)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V11-3)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
@@ -179,7 +179,15 @@
 <br><br/>
 # 更新日志
 ```
-通用书源V11-2，全网搜书Pro V28-2
+通用书源V11-3，全网搜书Pro V28-3
+───────
+①由于操作失误，导致`通用书源V9、全网搜书Pro V26`不是在`通用书源V8-1、全网搜书Pro V25-1`基础上进行更新，而是在前个版本上进行了更新，导致已修正的问题未能延续到之后的版本，现重新进行相关问题的修正。
+
+②多次优化正文规则，不断加快正文获取速度，快一点是一点，精益求精。
+
+```
+```
+通用书源V11，全网搜书Pro V28
 ───────
 ⓪重构“目录列表规则”，更改执行方式！
 
