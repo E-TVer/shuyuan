@@ -123,9 +123,9 @@
 <br><br/>
 # 书源相关链接
 <br><br/>
-全网搜书(Pro V29-3)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
+全网搜书(Pro V29-4)：[https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json](https://gitee.com/no-mystery/book-source/raw/master/%E5%85%A8%E7%BD%91%E6%90%9C%E4%B9%A6(%E7%99%BE%E5%BA%A6%E3%80%81%E8%B0%B7%E6%AD%8C%E3%80%81%E5%A4%B8%E5%85%8B).json)
 <br><br/>
-通用书源(V12-3)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+通用书源(V12-4)：[https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
 <br><br/>
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
@@ -178,6 +178,13 @@
 <br><br/>
 <br><br/>
 # 更新日志
+```
+通用书源V12-4、全网搜书Pro V29-4
+───────
+⓪“通用书源”添加网址时，链接后可先跟指令再跟URL参数，如“https:/✘/m.qubook.net/read.php?id=115393&txt=/TXT/%CA%F5%D0%DE%B4%F3%CE%D7.txt?1051#https:/✘/m.qubook.net/read.php?id=115393&txt=/TXT/%CA%F5%D0%DE%B4%F3%CE%D7.txt&yeshu=1#,{"webView":true}”。
+
+①优化正文规则的内容筛选机制，少数依然会获取到正文标签之外标签的网站，现在也能精确识别了。如“m.qubook.net”网站的小说。
+```
 ```
 通用书源V12-3，全网搜书Pro V29-3
 ───────
