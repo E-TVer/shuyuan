@@ -109,17 +109,17 @@
 <br><br/>
 <br><br/>
 # 书源相关链接
-全网通用(阿里云)：[https://bushixuanqi.oss-cn-chengdu.aliyuncs.com/%E6%BA%90.json](https://bushixuanqi.oss-cn-chengdu.aliyuncs.com/%E6%BA%90.json) 
+验证码源：https://gitee.com/no-mystery/book-source/raw/master/%E6%8C%BA%E5%A5%BD%E7%9A%84.json
 <br><br/>
-全网通用(github)：[https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json](https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json)
+源库订阅：https://gitee.com/no-mystery/book-source/raw/master/%E6%96%B0%E7%89%88%E6%BA%90%E4%BB%93%E5%BA%93%E8%AE%A2%E9%98%85.json
+<br><br/>
+精校书源：https://gitee.com/no-mystery/book-source/raw/master/%E7%B2%BE%E6%A0%A1%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86.json
+<br><br/>
+全网通用：https://gitee.com/no-mystery/book-source/raw/master/%E9%80%9A%E7%94%A8%E4%B9%A6%E6%BA%90.json
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
 在导入的书籍链接后加“?”，然后跟着“单直跳全逆原图字动静”中任意多个字或“[目录url]”或“数字#第二页链接#”，也能实现上面“简介设置单本”哪里描述的效果。
 ```
-<br><br/>
-精校书源合集：[https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E7%B2%BE%E6%A0%A1%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86.json](https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E7%B2%BE%E6%A0%A1%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86.json)
-<br><br/>
-网络导入->源仓库订阅：[https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E6%96%B0%E7%89%88%E6%BA%90%E4%BB%93%E5%BA%93%E8%AE%A2%E9%98%85.json](https://cdn.jsdelivr.net/gh/bushixuanqi/book-source/%E6%96%B0%E7%89%88%E6%BA%90%E4%BB%93%E5%BA%93%E8%AE%A2%E9%98%85.json)
 <br><br/>
 <br><br/>
 
