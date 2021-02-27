@@ -109,7 +109,7 @@
 <br><br/>
 <br><br/>
 # 书源相关链接
-[:fa-film:](https://m.weibo.cn/detail/4604944223046552)
+[:fa-film:验证码源](https://m.weibo.cn/detail/4604944223046552)
 验证码源：http://no-mystery.gitee.io/shuyuan/%E6%8C%BA%E5%A5%BD%E7%9A%84.json
   <br><br/>
 源库订阅：http://no-mystery.gitee.io/shuyuan/%E6%96%B0%E7%89%88%E6%BA%90%E4%BB%93%E5%BA%93%E8%AE%A2%E9%98%85.json
