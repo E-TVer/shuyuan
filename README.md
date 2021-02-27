@@ -110,21 +110,15 @@
 <br><br/>
 # 书源相关链接
 验证码源：http://no-mystery.gitee.io/shuyuan/%E6%8C%BA%E5%A5%BD%E7%9A%84.json
-<br><br/>
-验证码源示范视频：https://m.weibo.cn/detail/4604944223046552
-<br><br/>
+  :fa-film: 验证码源示范视频：https://m.weibo.cn/detail/4604944223046552
 <br><br/>
 源库订阅：http://no-mystery.gitee.io/shuyuan/%E6%96%B0%E7%89%88%E6%BA%90%E4%BB%93%E5%BA%93%E8%AE%A2%E9%98%85.json
 <br><br/>
-<br><br/>
 精校书源：http://no-mystery.gitee.io/shuyuan/%E7%B2%BE%E6%A0%A1%E4%B9%A6%E6%BA%90%E5%90%88%E9%9B%86.json
 <br><br/>
-<br><br/>
 全网通用：http://no-mystery.gitee.io/shuyuan/%E5%85%A8%E7%BD%91%E9%80%9A%E7%94%A8.json
-<br><br/>
-通用书源示范视频：https://m.weibo.cn/detail/4607771884653947
-<br><br/>
-全网搜书示范视频：https://m.weibo.cn/detail/4583477582760192
+  :fa-film: 通用书源示范视频：https://m.weibo.cn/detail/4607771884653947
+  :fa-film: 全网搜书示范视频：https://m.weibo.cn/detail/4583477582760192
 ```
 导入“通用书源”后，将书籍详情页或目录页链接粘贴到书架右上角菜单的“添加网址”处，确认后书籍将直接出现在书架，点进书籍即可阅读。
 在导入的书籍链接后加“?”，然后跟着“单直跳全逆原图字动静”中任意多个字或“[目录url]”或“数字#第二页链接#”，也能实现上面“简介设置单本”哪里描述的效果。
