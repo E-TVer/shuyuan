@@ -1,0 +1,23 @@
+name: backup for gitee.com/no-mystery/shuyuan
+on:
+  schedule:
+    - cron: "0 * * * *"
+jobs:
+  build:
+    name: start
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the source files
+        run: |
+          git clone https://gitee.com/no-mystery/shuyuan.git
+          
+      - name: Git push assets to "master" branch
+        run: |
+          cd ./shuyuan
+          sed -i '/url =/d' ./.git/config
+          git config --local user.name "actions"
+          git config --local user.email "action@github.com"
+          git add .
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan.git"
+          git push -u origin master
