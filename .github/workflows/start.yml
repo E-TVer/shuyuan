@@ -2,6 +2,9 @@ name: backup for gitee.com/no-mystery/shuyuan
 on:
   schedule:
     - cron: "0 * * * *"
+  push:
+    branch:
+      - "workflow"
 jobs:
   build:
     name: start
