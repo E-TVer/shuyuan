@@ -1,5 +1,5 @@
   _此仓库中文件为阅读APP书源配置文件_ 
-<b>阅读APP下载：</b>[http://www.legado.top/MyBookshelf/](http://www.legado.top/MyBookshelf/)
+<b>阅读APP下载：</b>[https://www.90pan.com/o138704](https://www.90pan.com/o138704)
 #  :fa-list: 全网搜书用法
 ###  :fa-search: 搜索格式定向搜索目标书籍
 ###  :fa-film: [搜索格式定向搜索目标书籍示范视频](https://m.weibo.cn/6893627530/4583477582760192)
