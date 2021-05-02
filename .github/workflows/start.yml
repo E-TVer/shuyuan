@@ -15,6 +15,8 @@ jobs:
         
       - name: Merge shuyuan source
         run: |
+          git config --local user.name "actions"
+          git config --local user.email "action@github.com"
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
@@ -28,8 +30,6 @@ jobs:
           #cd ./shuyuan
           git checkout workflow
           sed -i '/url =/d' ./.git/config
-          git config --local user.name "actions"
-          git config --local user.email "action@github.com"
           git add .
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
