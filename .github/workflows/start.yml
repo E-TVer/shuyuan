@@ -4,7 +4,7 @@ on:
   #  - cron: 0 * * * *
   push:
     branches:
-      - "workflow"
+      - "master"
 jobs:
   build:
     name: start
@@ -20,17 +20,28 @@ jobs:
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
-          git checkout workflow
+          git checkout master
           git merge master1 --allow-unrelated-histories --no-commit
           git branch -d master1
           git remote remove bushixuanqi
          
+      - name: Apply commit changes
+        run: |
+         if [ -f ./.git/MERGE_MSG ]; then
+          mkdir ./tmp && cp ./.git/MERGE_MSG ./tmp/message
+          sed -i "1c [bot] AutoMerging: merge all upstream's changes:" ./tmp/message
+          sed -i '/^\#.*/d' ./tmp/message
+          git commit --file="./tmp/message"
+         else
+           echo "There is no merge commits."
+         fi
+        
       - name: Git push assets to "master" branch
         run: |
           #cd ./shuyuan
-          git checkout workflow
-          sed -i '/url =/d' ./.git/config
-          git add .
-          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          #git checkout master
+          #sed -i '/url =/d' ./.git/config
+          #git add .
+          #git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
-          git push -u origin workflow
+          git push -u origin master
