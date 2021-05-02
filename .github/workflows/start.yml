@@ -19,11 +19,9 @@ jobs:
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
           git checkout workflow
-          git merge master1
+          git merge master1 --allow-unrelated-histories --no-commit
           git branch -d master1
-        
-      - name: SSH connection to Actions
-        uses: P3TERX/ssh2actions@v1.0.0
+          git remote remove bushixuanqi
          
       - name: Git push assets to "master" branch
         run: |
