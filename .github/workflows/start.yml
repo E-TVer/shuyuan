@@ -14,6 +14,11 @@ jobs:
         run: |
           git clone https://gitee.com/no-mystery/shuyuan.git
           
+      - name: add workflow
+        run: |
+          rm -rf ./shuyuan/.github
+          cp -rf .github ./shuyuan
+          
       - name: Git push assets to "master" branch
         run: |
           cd ./shuyuan
