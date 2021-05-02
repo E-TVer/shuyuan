@@ -12,26 +12,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
-      - name: Get the source files
+        
+      - name: Merge shuyuan source
         run: |
-          git clone https://gitee.com/no-mystery/shuyuan.git
-          
-      - name: add workflow
-        run: |
-          rm -rf ./shuyuan/.github
-          cp -rf .github ./shuyuan
-          
+          git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
+          git fetch bushixuanqi
+          git checkout -b master1 bushixuanqi/master
+          git checkout workflow
+          git merge master1
+          git branch -d master1
+        
       - name: SSH connection to Actions
         uses: P3TERX/ssh2actions@v1.0.0
          
       - name: Git push assets to "master" branch
         run: |
-          cd ./shuyuan
+          #cd ./shuyuan
+          git checkout workflow
           sed -i '/url =/d' ./.git/config
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
           git add .
           git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
-          git push -u origin master
+          git push -u origin workflow
