@@ -12,15 +12,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: master
-          lfs: true
         
       - name: Merge shuyuan source
         run: |
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
-          rm -f ./.git/MERGE_MSG
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
@@ -28,18 +24,8 @@ jobs:
           git merge master1 --allow-unrelated-histories --no-commit
           git branch -d master1
           git remote remove bushixuanqi
-         
-      - name: Apply commit changes
-        run: |
-         if [ -f ./.git/MERGE_MSG ]; then
-          mkdir ./tmp && cp ./.git/MERGE_MSG ./tmp/message
-          sed -i "1c [bot] AutoMerging: merge all upstream's changes:" ./tmp/message
-          sed -i '/^\#.*/d' ./tmp/message
-          git commit --file="./tmp/message"
-         else
-           echo "There is no merge commits."
-         fi
-        
+          rm -f ./.git/MERGE_MSG
+
       - name: Git push assets to "master" branch
         run: |
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
