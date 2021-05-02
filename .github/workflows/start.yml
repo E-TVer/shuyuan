@@ -1,10 +1,10 @@
 name: backup for gitee.com/no-mystery/shuyuan
 on:
-  schedule:
-    - cron: 0 * * * *
-  #push:
-    #branches:
-      #- "master"
+  #schedule:
+  #  - cron: 0 * * * *
+  push:
+    branches:
+      - "master"
 jobs:
   build:
     name: start
@@ -12,11 +12,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: master
+          lfs: true
         
       - name: Merge shuyuan source
         run: |
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
+          rm -f ./.git/MERGE_MSG
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
