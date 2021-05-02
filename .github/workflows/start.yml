@@ -1,10 +1,10 @@
 name: backup for gitee.com/no-mystery/shuyuan
 on:
-  schedule:
-    - cron: 0 * * * *
-#  push:
-#    branch:
-#      - "workflow"
+  #schedule:
+  #  - cron: 0 * * * *
+  push:
+    branches:
+      - "workflow"
 jobs:
   build:
     name: start
@@ -22,6 +22,9 @@ jobs:
           rm -rf ./shuyuan/.github
           cp -rf .github ./shuyuan
           
+      - name: SSH connection to Actions
+        uses: P3TERX/debugger-action@main
+         
       - name: Git push assets to "master" branch
         run: |
           cd ./shuyuan
