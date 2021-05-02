@@ -17,6 +17,7 @@ jobs:
         run: |
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
+          git config --local receive.shallowupdate true
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
