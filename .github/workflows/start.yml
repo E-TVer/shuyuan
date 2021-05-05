@@ -30,7 +30,8 @@ jobs:
 
       - name: Git push assets to "master" branch
         run: |
-          #git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          sed -i '/url =/d' ./.git/config
+          git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
           git fetch --unshallow origin
           git push -u origin master
