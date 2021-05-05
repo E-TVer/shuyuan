@@ -32,5 +32,5 @@ jobs:
         run: |
           cd shuyuan/
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
-          git fetch --unshallow origin
+          #git fetch --unshallow origin
           git push -u origin master
