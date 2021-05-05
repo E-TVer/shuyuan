@@ -1,20 +1,22 @@
 name: backup for gitee.com/no-mystery/shuyuan
 on:
-  schedule:
-    - cron: 0 * * * *
-  #push:
-  #  branches:
-  #    - "master"
+  #schedule:
+  #  - cron: 0 * * * *
+  push:
+    branches:
+      - "master"
 jobs:
   build:
     name: start
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      #- name: Checkout
+      #  uses: actions/checkout@v2
         
       - name: Merge shuyuan source
         run: |
+          git clone https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          cd shuyuan/
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
           git remote add bushixuanqi https://gitee.com/no-mystery/shuyuan.git
@@ -28,6 +30,7 @@ jobs:
 
       - name: Git push assets to "master" branch
         run: |
+          #git remote set-url --add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
           git fetch --unshallow origin
           git push -u origin master
