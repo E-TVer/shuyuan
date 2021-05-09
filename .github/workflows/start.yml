@@ -2,9 +2,9 @@ name: backup for gitee.com/no-mystery/shuyuan
 on:
   schedule:
     - cron: 0 * * * *
-  #push:
-  #  branches:
-  #    - "master"
+  push:
+    branches:
+      - "master"
 jobs:
   build:
     name: start
@@ -31,6 +31,7 @@ jobs:
       - name: Git push assets to "master" branch
         run: |
           cd shuyuan/
+          git add .
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
           #git fetch --unshallow origin
           git push -u origin master
