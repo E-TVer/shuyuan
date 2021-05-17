@@ -23,14 +23,11 @@ jobs:
           git fetch bushixuanqi
           git checkout -b master1 bushixuanqi/master
           git checkout master
-          git merge master1 --allow-unrelated-histories --no-commit
-          #git merge master1 --allow-unrelated-histories -m 'merge from latest'
+          git merge master1 --allow-unrelated-histories -m 'merge from latest'
 
       - name: Git push assets to "master" branch
         run: |
           cd shuyuan/
-          git add .
           git remote set-url --add origin "https://${{ secrets.CODING_ACCOUNT }}:${{ secrets.CODING_PASSWORD }}@e.coding.net/${{ secrets.CODING_NAME }}/shuyuan/shuyuan.git"
           #git fetch --unshallow origin
-          git push -f origin master
-          #git push -u origin master
+          git push -u origin master
